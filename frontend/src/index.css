@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.slide-image{
+    transition: translate 1s ease-in-out;
+}
