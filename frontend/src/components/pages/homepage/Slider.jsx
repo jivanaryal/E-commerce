@@ -33,7 +33,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1500px] w-full aspect-[10/5] mx-auto my-0">
+    <div className="max-w-[1400px] w-full h-[700px]  mx-auto my-0">
       <div className="w-10/12 mx-auto h-full flex overflow-hidden ">
         {slideItem.map((val, i) => {
           return (
