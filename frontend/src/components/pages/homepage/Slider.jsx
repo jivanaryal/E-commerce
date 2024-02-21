@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import url1 from "../../../assets/images/sliderImg.jpg";
-import url2 from "../../../assets/images/image2.jpg";
-import url3 from "../../../assets/images/image3.jpg";
+import url2 from "../../../assets/images/image4.jpg";
+import url3 from "../../../assets/images/image3.png";
 
 // This is slider page
 
-const slideItem = [url1, url1, url1];
+const slideItem = [url1, url2, url3];
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
