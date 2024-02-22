@@ -20,7 +20,13 @@ const Navbar = () => {
           <div>Logo</div>
         </div>
         <div className="middle">
-          <div>Home</div>
+          {NavItem.map((val, i) => {
+            return (
+              <div key={i}>
+                <div>{val.name}</div>
+              </div>
+            );
+          })}
         </div>
         <div className="right"></div>
       </div>
