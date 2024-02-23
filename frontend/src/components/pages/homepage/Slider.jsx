@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import url1 from "../../../assets/images/sliderImg.jpg";
-import url2 from "../../../assets/images/image4.jpg";
-import url3 from "../../../assets/images/image3.png";
+import url4 from "../../../assets/images/iphone.png";
 
 // This is slider page
 
-const slideItem = [url1, url2, url3];
+const slideItem = [url4, url4, url4];
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
@@ -33,8 +31,8 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1200px] w-full h-[680px]   mx-auto my-0">
-      <div className="w-10/12 mx-auto h-[600px] py-10 flex overflow-hidden ">
+    <div className="max-w-[1600px] w-full h-[640px] bg-[#302D2D]   mx-auto my-0">
+      <div className="w-10/12 mx-auto h-[650px] py-10 flex overflow-hidden ">
         {slideItem.map((val, i) => {
           return (
             <div key={i} className="flex-none">
