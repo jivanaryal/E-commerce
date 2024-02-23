@@ -3,7 +3,7 @@ import Slider from "./Slider";
 
 const index = () => {
   return (
-    <div>
+    <div className="bg-[#D9D9D9]">
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />

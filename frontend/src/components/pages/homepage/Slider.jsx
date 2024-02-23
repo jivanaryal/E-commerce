@@ -17,12 +17,12 @@ const Slider = () => {
     });
   };
 
-  const PreviousItem = () => {
-    setIndex((index) => {
-      if (index === 0) return slideItem.length - 1;
-      return index - 1;
-    });
-  };
+  // const PreviousItem = () => {
+  //   setIndex((index) => {
+  //     if (index === 0) return slideItem.length - 1;
+  //     return index - 1;
+  //   });
+  // };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,15 +33,15 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1400px] w-full h-[700px]  mx-auto my-0">
-      <div className="w-10/12 mx-auto h-full flex overflow-hidden ">
+    <div className="max-w-[1200px] w-full h-[680px]   mx-auto my-0">
+      <div className="w-10/12 mx-auto h-[600px] py-10 flex overflow-hidden ">
         {slideItem.map((val, i) => {
           return (
             <div key={i} className="flex-none">
               <img
                 src={val}
                 alt=""
-                className=" slide-image object-cover w-full mx-auto h-full"
+                className=" slide-image object-cover rounded-xl w-full mx-auto h-full"
                 style={{ translate: `${-100 * index}%` }}
               />
             </div>
