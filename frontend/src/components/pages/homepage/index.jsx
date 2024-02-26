@@ -1,3 +1,4 @@
+import BestSellingProduct from "./BestSellingProduct";
 import Category from "./Category";
 import Slider from "./Slider";
 
@@ -7,6 +8,7 @@ const index = () => {
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />
+      <BestSellingProduct />
     </div>
   );
 };
