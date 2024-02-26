@@ -1,0 +1,55 @@
+// This is category section
+import { IoIosPhonePortrait } from "react-icons/io";
+
+const CatContent = [
+  {
+    name: "phones",
+    logos: <IoIosPhonePortrait />,
+  },
+  {
+    name: "phones",
+    logos: <IoIosPhonePortrait />,
+  },
+  {
+    name: "phones",
+    logos: <IoIosPhonePortrait />,
+  },
+  {
+    name: "phones",
+    logos: <IoIosPhonePortrait />,
+  },
+  {
+    name: "phones",
+    logos: <IoIosPhonePortrait />,
+  },
+];
+
+const Category = () => {
+  return (
+    <div className="pb-40 pt-10 bg-white fonts border-2">
+      <div className="main  w-10/12 mx-auto">
+        <div className="header flex justify-between items-center ">
+          <h1 className="text-2xl text-black">Categories</h1>
+          <button className="bg-[#00ABE4] py-1 px-3 rounded-md">
+            View all
+          </button>
+        </div>
+        <div className="content flex justify-between items-center   pt-10 ">
+          {CatContent.map((val, i) => {
+            return (
+              <div
+                key={i}
+                className="border-[1px] rounded-md border-gray-800 w-40 py-10 flex items-center justify-center flex-col"
+              >
+                <div className="text-3xl">{val.logos}</div>
+                <div className="text-lg">{val.name}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Category;
