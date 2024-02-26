@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.slide-image{
+  transition: translate 1s ease-in-out;
+    
+}
+
+.fonts  {
+  font-family: "PT Serif Caption", serif;
+  font-weight: 400;
+  font-style: normal;
+ 
+}
+
