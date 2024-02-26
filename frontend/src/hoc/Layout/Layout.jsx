@@ -7,7 +7,9 @@ const Layout = () => {
       <div className="sticky top-0 z-10">
         <Navbar />
       </div>
-      <Outlet />
+      <div className="w-[97%] mx-auto bg-gray-800">
+        <Outlet />
+      </div>
     </div>
   );
 };

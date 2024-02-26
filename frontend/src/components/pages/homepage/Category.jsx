@@ -26,8 +26,8 @@ const CatContent = [
 
 const Category = () => {
   return (
-    <div className="pb-40 pt-10 bg-white fonts border-2">
-      <div className="main  w-10/12 mx-auto">
+    <div className="pb-10 bg-white pt-10 fonts border-2">
+      <div className="main   mx-4">
         <div className="header flex justify-between items-center ">
           <h1 className="text-2xl text-black">Categories</h1>
           <button className="bg-[#00ABE4] py-1 px-3 rounded-md">
