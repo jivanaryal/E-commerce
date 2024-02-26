@@ -31,7 +31,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1600px] w-full h-[640px] bg-[#302D2D]   mx-auto my-0">
+    <div className="max-w-[1600px] w-full h-[640px] bg-[#000000]   mx-auto my-0">
       <div className="w-10/12 mx-auto h-[650px] py-10 flex overflow-hidden ">
         {slideItem.map((val, i) => {
           return (
@@ -39,7 +39,7 @@ const Slider = () => {
               <img
                 src={val}
                 alt=""
-                className=" slide-image object-cover rounded-xl w-full mx-auto h-full"
+                className="-z-10 slide-image object-cover rounded-xl w-full mx-auto h-full"
                 style={{ translate: `${-100 * index}%` }}
               />
             </div>

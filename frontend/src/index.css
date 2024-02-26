@@ -18,3 +18,16 @@
  
 }
 
+body {
+  overflow-y: scroll;
+
+
+
+
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background-color: "linear-gradient(to right, #00011f, #004e92)",
+}
+

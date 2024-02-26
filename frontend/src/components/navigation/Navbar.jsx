@@ -16,7 +16,7 @@ const NavItem = [
 ];
 const Navbar = () => {
   return (
-    <div className="bg-mainColor h-16 text-[#F8F8F9]  fonts ">
+    <div className="bg-mainColor h-16 text-[#F8F8F9]   fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
           <div>Logo</div>
