@@ -23,7 +23,9 @@ return()=>{
       <div className={` z-10 ${scroll? "sticky top-0 left-0":"sticky top-0 left-0"}`}>
         <Navbar />
       </div>
-      <Outlet />
+      <div className="w-[97%] mx-auto bg-gray-800">
+        <Outlet />
+      </div>
     </div>
   );
 };
