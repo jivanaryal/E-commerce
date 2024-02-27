@@ -4,7 +4,7 @@ import airpod from "../../../assets/images/airpod.png";
 import { FaRegEye } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
-import { useState } from "react";
+
 const BestSellingProduct = () => {
   const sellingContent = [
     {
