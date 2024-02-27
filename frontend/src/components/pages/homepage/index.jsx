@@ -2,6 +2,8 @@ import BestSellingProduct from "./BestSellingProduct";
 import Category from "./Category";
 import ExploreProducts from "./ExploreProducts";
 import Slider from "./Slider";
+import Team from "./Team";
+import Testimonials from "./Testimonials";
 
 const index = () => {
   return (
@@ -9,8 +11,10 @@ const index = () => {
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />
-      <BestSellingProduct />
       <ExploreProducts />
+      <BestSellingProduct />
+      <Testimonials />
+      <Team />
     </div>
   );
 };
