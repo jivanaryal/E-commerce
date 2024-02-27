@@ -48,13 +48,13 @@ const TeamDetails = [
 const Team = () => {
   return (
     <div className="bg-white">
-      <h1 className="text-2xl ml-4 text-black">Our Teams</h1>
-      <div className="grid grid-cols-4 place-items-center  gap-4">
+      <h1 className="text-2xl ml-4 text-black pb-6">Our Teams</h1>
+      <div className="grid grid-cols-4 place-items-center  gap-y-10 mx-auto">
         {TeamDetails.map((val, i) => {
           return (
             <div
               key={i}
-              className="border-2 w-80 p-3 shadow-md flex flex-col items-center rounded-xl  outline-none"
+              className="w-80 p-3 border-2 shadow-md flex flex-col items-center rounded-xl  outline-none hover:scale-105 transition-all duration-700 delay-100"
             >
               <img
                 src={val.photo}
