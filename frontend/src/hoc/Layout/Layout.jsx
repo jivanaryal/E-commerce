@@ -1,30 +1,37 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/navigation/Navbar";
 import { useEffect, useState } from "react";
+import Footer from "../../components/footer/Footer";
 
 const Layout = () => {
-  const [scroll,setScroll] = useState(false);
-  const handleScroll = ()=>{
-    if(window.scrollY>10){
+  const [scroll, setScroll] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
       setScroll(true);
-    }
-    else{
+    } else {
       setScroll(false);
     }
-  }
-  useEffect(()=>{
-window.addEventListener("scroll",handleScroll);
-return()=>{
-  window.removeEventListener("scroll",handleScroll);
-}
-  },[])
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      <div className={` z-10 ${scroll? "sticky top-0 left-0":"sticky top-0 left-0"}`}>
+      <div
+        className={` z-10 ${
+          scroll ? "sticky top-0 left-0" : "sticky top-0 left-0"
+        }`}
+      >
         <Navbar />
       </div>
       <div className="w-[97%] mx-auto bg-gray-800">
         <Outlet />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
