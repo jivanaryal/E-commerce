@@ -17,6 +17,26 @@ body {
 font-family: "PT Serif Caption", serif;
   font-weight: 400;
   font-style: normal;
+ 
+} */
+.scrollbar::-webkit-scrollbar{
+width: 5px;
+}
+.scrollHide::-webkit-scrollbar{
+  display: none;
+}
+.scrollDesign::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #00ABE4;
+  border-radius: 1px;
+}
+
+/* Handle */
+.scrollHandle::-webkit-scrollbar-thumb {
+  background: #00ABE4;
+  width: 1px;
+  
+}
+body {
   overflow-y: scroll;
 
   font-family: "PT Serif Caption", serif;

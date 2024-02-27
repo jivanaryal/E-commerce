@@ -5,8 +5,47 @@ import { FaRegEye } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
+import { useNavigate } from "react-router-dom";
 const BestSellingProduct = () => {
+  const [count, setCount] = useState(0);
+  const navigate = useNavigate();
   const sellingContent = [
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
+    {
+      name: "Samsung s23 ultra",
+      newprice: "$1900",
+      oldprice: "$2100",
+      image: phone,
+    },
+    {
+      name: "Dell Laptop",
+      newprice: "$1000",
+      oldprice: "$1100",
+      image: laptop,
+    },
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
+    {
+      name: "Samsung s23 ultra",
+      newprice: "$1900",
+      oldprice: "$2100",
+      image: phone,
+    },
+    {
+      name: "Dell Laptop",
+      newprice: "$1000",
+      oldprice: "$1100",
+      image: laptop,
+    },
     {
       name: "Airpods pro",
       newprice: "$100",
@@ -30,13 +69,20 @@ const BestSellingProduct = () => {
     <div className="bg-white pb-10 pt-5 ">
       <div className="flex justify-between items-center mx-4 ">
         <div className="text-2xl">Best Selling Products</div>
-        <div className="bg-mainColor px-3 py-1 rounded-md">View All</div>
+        <div
+          className="bg-mainColor px-3 py-1 rounded- cursor-pointer"
+          onClick={() => {
+            navigate("/bestselling");
+          }}
+        >
+          View All
+        </div>
       </div>
-      <div className="flex gap-7 mt-5">
+      <div className="flex gap-7 mt-5 w-[100%] overflow-x-scroll scrollbar scrollDesign  scrollHandle">
         {sellingContent.map((val, i) => {
           return (
             <div className="flex cursor-pointer" key={i}>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-1">
                 <div className="flex justify-between items-center">
                   {/* The image section and its icons relatively */}
                   <div className="bg-thirdColor rounded-sm h-[250px] w-[230px] flex justify-center items-center relative ">

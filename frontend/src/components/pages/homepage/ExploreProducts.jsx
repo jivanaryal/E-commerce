@@ -6,15 +6,59 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 const ExploreProducts = () => {
+  const ref = useRef(null);
+  const handleScroll = (offset) => {
+    if (ref.current) {
+      ref.current.scrollLeft += offset;
+    }
+  };
+
   const sellingContent = [
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
     {
       name: "Samsung s23 ultra",
       newprice: "$1900",
       oldprice: "$2100",
       image: phone,
     },
+    {
+      name: "Samsung s23 ultra",
+      newprice: "$1900",
+      oldprice: "$2100",
+      image: phone,
+    },
+    {
+      name: "Dell Laptop",
+      newprice: "$1000",
+      oldprice: "$1100",
+      image: laptop,
+    },
+    {
+      name: "Samsung s23 ultra",
+      newprice: "$1900",
+      oldprice: "$2100",
+      image: phone,
+    },
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
+
     {
       name: "Dell Laptop",
       newprice: "$1000",
@@ -33,19 +77,32 @@ const ExploreProducts = () => {
       <div className="flex justify-between items-center mx-4 ">
         <div className="text-2xl">Explore Our Products</div>
         <div className=" px-3 py-1 rounded-md flex gap-3 text-xl">
-          <div className="bg-thirdColor cursor-pointer p-1 rounded-md">
+          <div
+            className={`bg-thirdColor cursor-pointer p-1 rounded-md`}
+            onClick={() => {
+              handleScroll(-300);
+            }}
+          >
             <FaArrowLeft />
           </div>
-          <div className="bg-thirdColor cursor-pointer p-1 rounded-md">
+          <div
+            className="bg-thirdColor cursor-pointer p-1 rounded-md"
+            onClick={() => {
+              handleScroll(300);
+            }}
+          >
             <FaArrowRight />
           </div>
         </div>
       </div>
-      <div className="flex gap-7 mt-5">
+      <div
+        className="flex gap-7 mt-5 w-[100%] overflow-x-scroll scrollHide  scroll-smooth "
+        ref={ref}
+      >
         {sellingContent.map((val, i) => {
           return (
             <div className="flex cursor-pointer" key={i}>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-1">
                 <div className="flex justify-between items-center">
                   {/* The image section and its icons relatively */}
                   <div className="bg-thirdColor rounded-sm h-[250px] w-[230px] flex justify-center items-center relative ">
