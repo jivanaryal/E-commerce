@@ -1,6 +1,7 @@
 import BestSellingProduct from "./BestSellingProduct";
 import Category from "./Category";
 import ExploreProducts from "./ExploreProducts";
+import Services from "./Services";
 import Slider from "./Slider";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
@@ -14,6 +15,7 @@ const index = () => {
       <ExploreProducts />
       <BestSellingProduct />
       <Testimonials />
+      <Services />
       <Team />
     </div>
   );
