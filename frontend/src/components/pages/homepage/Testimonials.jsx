@@ -3,7 +3,7 @@ const Testimonials = () => {
   return (
     <div className="bg-white">
       <div className="pt-32 pb-40 bg-white w-10/12 mx-auto ">
-        <h1 className="text-2xl text-mainColor ml-6 pb-10">
+        <h1 className="text-3xl text-mainColor ml-6 pb-10">
           What our customers say about us
         </h1>
         <div className="grid grid-cols-2 justify-center  place-items-center">

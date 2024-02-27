@@ -8,12 +8,12 @@ import Testimonials from "./Testimonials";
 
 const index = () => {
   return (
-    <div className="bg-[#D9D9D9]">
+    <div className="bg-white">
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />
-      <ExploreProducts />
       <BestSellingProduct />
+      <ExploreProducts />
       <Testimonials />
       <Services />
       <Team />
