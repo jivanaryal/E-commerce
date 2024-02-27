@@ -48,21 +48,22 @@ const TeamDetails = [
 const Team = () => {
   return (
     <div className="bg-white">
-      <div className="grid grid-cols-4 place-items-center py-20 gap-4">
+      <h1 className="text-2xl ml-4 text-black">Our Teams</h1>
+      <div className="grid grid-cols-4 place-items-center  gap-4">
         {TeamDetails.map((val, i) => {
           return (
             <div
               key={i}
-              className="border-2 w-80 shadow-md flex flex-col items-center rounded-xl p-1 outline-none"
+              className="border-2 w-80 p-3 shadow-md flex flex-col items-center rounded-xl  outline-none"
             >
               <img
                 src={val.photo}
                 alt="photo"
-                className=" object-cover rounded-xl bg-red-500"
+                className=" w-full h-52 rounded-xl bg-red-500"
               />
               <div className="name font-bold">{val.title}</div>
               <div className="position items-start">{val.position}</div>
-              <div className="about text-sm px-4 pb-4">{val.about}</div>
+              <div className="about text-sm px-2 pb-4">{val.about}</div>
             </div>
           );
         })}

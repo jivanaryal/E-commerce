@@ -11,10 +11,10 @@ const index = () => {
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />
+      <ExploreProducts />
+      <BestSellingProduct />
       <Testimonials />
       <Team />
-      <BestSellingProduct />
-      <ExploreProducts />
     </div>
   );
 };
