@@ -4,15 +4,11 @@ import airpod from "../../../assets/images/airpod.png";
 import { FaRegEye } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 import { useState } from "react";
-const BestSellingProduct = () => {
+const ExploreProducts = () => {
   const sellingContent = [
-    {
-      name: "Airpods pro",
-      newprice: "$100",
-      oldprice: "$110",
-      image: airpod,
-    },
     {
       name: "Samsung s23 ultra",
       newprice: "$1900",
@@ -25,12 +21,25 @@ const BestSellingProduct = () => {
       oldprice: "$1100",
       image: laptop,
     },
+    {
+      name: "Airpods pro",
+      newprice: "$100",
+      oldprice: "$110",
+      image: airpod,
+    },
   ];
   return (
-    <div className="bg-white pb-10 pt-5 ">
+    <div className="bg-white pb-40 pt-5 ">
       <div className="flex justify-between items-center mx-4 ">
-        <div className="text-2xl">Best Selling Products</div>
-        <div className="bg-mainColor px-3 py-1 rounded-md">View All</div>
+        <div className="text-2xl">Explore Our Products</div>
+        <div className=" px-3 py-1 rounded-md flex gap-3 text-xl">
+          <div className="bg-thirdColor cursor-pointer p-1 rounded-md">
+            <FaArrowLeft />
+          </div>
+          <div className="bg-thirdColor cursor-pointer p-1 rounded-md">
+            <FaArrowRight />
+          </div>
+        </div>
       </div>
       <div className="flex gap-7 mt-5">
         {sellingContent.map((val, i) => {
@@ -92,4 +101,4 @@ const BestSellingProduct = () => {
   );
 };
 
-export default BestSellingProduct;
+export default ExploreProducts;

@@ -1,5 +1,6 @@
 import BestSellingProduct from "./BestSellingProduct";
 import Category from "./Category";
+import ExploreProducts from "./ExploreProducts";
 import Slider from "./Slider";
 
 const index = () => {
@@ -9,6 +10,7 @@ const index = () => {
       <Slider />
       <Category />
       <BestSellingProduct />
+      <ExploreProducts />
     </div>
   );
 };
