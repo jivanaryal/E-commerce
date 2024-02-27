@@ -7,7 +7,7 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 
 import { useNavigate } from "react-router-dom";
 const BestSellingProduct = () => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const navigate = useNavigate();
   const sellingContent = [
     {
