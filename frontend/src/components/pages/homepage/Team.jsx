@@ -47,17 +47,17 @@ const TeamDetails = [
 
 const Team = () => {
   return (
-    <div className="bg-[#5555c7] p-14  rounded-md">
+    <div className="bg-white border-2 p-14  rounded-md">
       <h1 className="text-3xl  text-black ">Meet Our Team</h1>
       <p className="text-white text-lg pb-10 pt-4">
         Get to know the talented individuals behind our compnay
       </p>
-      <div className="grid grid-cols-4 place-items-center gap-10">
+      <div className="grid grid-cols-3 place-items-center gap-y-10">
         {TeamDetails.map((val, i) => {
           return (
             <div
               key={i}
-              className="w-80 pt-6 pb-10 p-3 bg-white border-2 shadow-md flex flex-col items-center rounded-xl  outline-none hover:scale-105 transition-all duration-700 delay-100"
+              className="w-80 pt-6 pb-10 p-3 bg-white shadow-mainColor border-[1px] shadow-md flex flex-col items-center rounded-xl  outline-none hover:scale-105 transition-all duration-700 delay-100"
             >
               <img
                 src={val.photo}

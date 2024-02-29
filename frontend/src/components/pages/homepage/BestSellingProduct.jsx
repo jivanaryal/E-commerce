@@ -5,7 +5,7 @@ import { FaRegEye } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const BestSellingProduct = () => {
   const navigate = useNavigate();
   const sellingContent = [
@@ -71,7 +71,7 @@ const BestSellingProduct = () => {
         <div
           className="bg-mainColor px-3 py-1 rounded-xl cursor-pointer"
           onClick={() => {
-            navigate("/bestselling");
+            navigate("/singleItem");
           }}
         >
           View All
@@ -79,56 +79,62 @@ const BestSellingProduct = () => {
       </div>
       <div className="flex gap-7 mt-5 w-[100%] overflow-x-scroll scrollbar scrollDesign  scrollHandle">
         {sellingContent.map((val, i) => {
+          console.log(val.image);
           return (
-            <div className="flex cursor-pointer" key={i}>
-              <div className="flex flex-col gap-1">
-                <div className="flex justify-between items-center">
-                  {/* The image section and its icons relatively */}
-                  <div className="bg-thirdColor rounded-sm h-[250px] w-[230px] flex justify-center items-center relative ">
-                    <div className="flex">
-                      <img src={val.image} className="mx-auto  h-36" />
-                    </div>
-                    <div className="flex flex-col gap-4 absolute right-3 top-5">
-                      <div className="p-1 bg-white rounded-full">
-                        <CiHeart />
+            <div key={i}>
+              <Link to={`/singleItem`} state={val}>
+                {" "}
+                <div className="flex cursor-pointer">
+                  <div className="flex flex-col gap-1">
+                    <div className="flex justify-between items-center">
+                      {/* The image section and its icons relatively */}
+                      <div className="bg-thirdColor rounded-sm h-[250px] w-[230px] flex justify-center items-center relative ">
+                        <div className="flex">
+                          <img src={val.image} className="mx-auto  h-36" />
+                        </div>
+                        <div className="flex flex-col gap-4 absolute right-3 top-5">
+                          <div className="p-1 bg-white rounded-full">
+                            <CiHeart />
+                          </div>
+                          <div className="p-1 bg-white rounded-full">
+                            <FaRegEye />
+                          </div>
+                        </div>
                       </div>
-                      <div className="p-1 bg-white rounded-full">
-                        <FaRegEye />
+                    </div>
+                    {/* The title section */}
+                    <div className="flex flex-col gap-2 ">
+                      <div>{val.name}</div>
+                      <div className="flex gap-3">
+                        <div className="text-red-600">{val.newprice}</div>
+                        <div className="line-through text-thirdColor">
+                          {val.oldprice}
+                        </div>
+                      </div>
+                      <div className="flex gap-1 items-center">
+                        <div className="flex text-orange-500 items-center">
+                          <div>
+                            <MdOutlineStarPurple500 />
+                          </div>
+                          <div>
+                            <MdOutlineStarPurple500 />
+                          </div>
+                          <div>
+                            <MdOutlineStarPurple500 />
+                          </div>
+                          <div>
+                            <MdOutlineStarPurple500 />
+                          </div>
+                          <div className="text-gray-300">
+                            <MdOutlineStarPurple500 />
+                          </div>
+                          <div className="text-thirdColor">(65)</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* The title section */}
-                <div className="flex flex-col gap-2 ">
-                  <div>{val.name}</div>
-                  <div className="flex gap-3">
-                    <div className="text-red-600">{val.newprice}</div>
-                    <div className="line-through text-thirdColor">
-                      {val.oldprice}
-                    </div>
-                  </div>
-                  <div className="flex gap-1 items-center">
-                    <div className="flex text-orange-500 items-center">
-                      <div>
-                        <MdOutlineStarPurple500 />
-                      </div>
-                      <div>
-                        <MdOutlineStarPurple500 />
-                      </div>
-                      <div>
-                        <MdOutlineStarPurple500 />
-                      </div>
-                      <div>
-                        <MdOutlineStarPurple500 />
-                      </div>
-                      <div className="text-gray-300">
-                        <MdOutlineStarPurple500 />
-                      </div>
-                      <div className="text-thirdColor">(65)</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
           );
         })}
