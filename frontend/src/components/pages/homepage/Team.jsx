@@ -47,7 +47,7 @@ const TeamDetails = [
 
 const Team = () => {
   return (
-    <div className="bg-[#2b2b5c] p-10  rounded-md">
+    <div className="bg-[#5555c7] p-14  rounded-md">
       <h1 className="text-3xl  text-black ">Meet Our Team</h1>
       <p className="text-white text-lg pb-10 pt-4">
         Get to know the talented individuals behind our compnay
