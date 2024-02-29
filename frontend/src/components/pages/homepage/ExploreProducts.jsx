@@ -6,7 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 const ExploreProducts = () => {
   const ref = useRef(null);
   const handleScroll = (offset) => {
@@ -73,14 +73,14 @@ const ExploreProducts = () => {
     },
   ];
   return (
-    <div className="bg-white pb-40 pt-5 ">
+    <div className="bg-white pb-10 pt-5 mt-10 ">
       <div className="flex justify-between items-center mx-4 ">
         <div className="text-2xl">Explore Our Products</div>
         <div className=" px-3 py-1 rounded-md flex gap-3 text-xl">
           <div
             className={`bg-thirdColor cursor-pointer p-1 rounded-md`}
             onClick={() => {
-              handleScroll(-300);
+              handleScroll(-250);
             }}
           >
             <FaArrowLeft />
@@ -88,7 +88,7 @@ const ExploreProducts = () => {
           <div
             className="bg-thirdColor cursor-pointer p-1 rounded-md"
             onClick={() => {
-              handleScroll(300);
+              handleScroll(250);
             }}
           >
             <FaArrowRight />

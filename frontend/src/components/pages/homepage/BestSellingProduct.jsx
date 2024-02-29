@@ -7,7 +7,6 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 
 import { useNavigate } from "react-router-dom";
 const BestSellingProduct = () => {
-  // const [count, setCount] = useState(0);
   const navigate = useNavigate();
   const sellingContent = [
     {
@@ -70,7 +69,7 @@ const BestSellingProduct = () => {
       <div className="flex justify-between items-center mx-4 ">
         <div className="text-2xl">Best Selling Products</div>
         <div
-          className="bg-mainColor px-3 py-1 rounded- cursor-pointer"
+          className="bg-mainColor px-3 py-1 rounded-xl cursor-pointer"
           onClick={() => {
             navigate("/bestselling");
           }}

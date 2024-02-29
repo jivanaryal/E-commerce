@@ -34,7 +34,7 @@ const Category = () => {
             View all
           </button>
         </div>
-        <div className="content flex justify-between items-center   pt-10 ">
+        <div className="content flex justify-around items-center   pt-10 ">
           {CatContent.map((val, i) => {
             return (
               <div
