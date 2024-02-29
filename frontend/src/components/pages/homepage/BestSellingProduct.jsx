@@ -66,6 +66,10 @@ const BestSellingProduct = () => {
   ];
   return (
     <div className="bg-white pb-10 pt-5 ">
+      <div className="flex gap-2 items-center cursor-pointer">
+        <div className="bg-mainColor h-5 w-2 rounded-sm "></div>
+        <div className="text-mainColor text-xs">This month</div>
+      </div>
       <div className="flex justify-between items-center mx-4 ">
         <div className="text-2xl">Best Selling Products</div>
         <div

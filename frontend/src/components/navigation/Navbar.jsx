@@ -1,17 +1,22 @@
 import { CiSearch } from "react-icons/ci";
 import { IoMdCart } from "react-icons/io";
+import { Link } from "react-router-dom";
 const NavItem = [
   {
     name: "Home",
+    path: "/",
   },
   {
     name: "products",
+    path: "/products",
   },
   {
     name: "contact",
+    path: "/contact",
   },
   {
     name: "About us",
+    path: "/about",
   },
 ];
 const Navbar = () => {
@@ -26,7 +31,10 @@ const Navbar = () => {
             {NavItem.map((val, i) => {
               return (
                 <div key={i}>
-                  <div>{val.name}</div>
+                  <Link to={val.path}>
+                    {" "}
+                    <div>{val.name}</div>
+                  </Link>
                 </div>
               );
             })}
