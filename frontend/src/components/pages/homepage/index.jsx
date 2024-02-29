@@ -12,8 +12,8 @@ const index = () => {
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />
-      <ExploreProducts />
       <BestSellingProduct />
+      <ExploreProducts />
       <Testimonials />
       <Services />
       <Team />
