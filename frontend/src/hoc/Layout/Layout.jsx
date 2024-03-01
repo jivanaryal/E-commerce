@@ -30,9 +30,6 @@ const Layout = () => {
       <div className=" bg-white">
         <Outlet />
       </div>
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 };

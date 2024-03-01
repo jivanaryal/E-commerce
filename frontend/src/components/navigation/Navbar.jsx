@@ -1,6 +1,7 @@
 import { CiSearch } from "react-icons/ci";
 import { IoMdCart } from "react-icons/io";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
 const NavItem = [
   {
     name: "Home",
@@ -24,7 +25,9 @@ const Navbar = () => {
     <div className="bg-mainColor h-16 text-[#F8F8F9]   fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
-          <div>Logo</div>
+          <div>
+            <img src={logo} alt="logo" className="w-12 rounded-full h-12" />
+          </div>
         </div>
         <div className="flex">
           <div className="flex gap-6 mr-4  ">
