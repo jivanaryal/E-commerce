@@ -27,7 +27,7 @@ const Layout = () => {
       >
         <Navbar />
       </div>
-      <div className="w-[97%] mx-auto bg-white">
+      <div className=" bg-white">
         <Outlet />
       </div>
       <div>

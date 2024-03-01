@@ -11,56 +11,56 @@ const BestSellingProduct = () => {
   const sellingContent = [
     {
       name: "Airpods pro",
-      newprice: "$100",
-      oldprice: "$110",
+      newprice: "100",
+      oldprice: "110",
       image: airpod,
     },
     {
       name: "Samsung s23 ultra",
-      newprice: "$1900",
-      oldprice: "$2100",
+      newprice: "1900",
+      oldprice: "2100",
       image: phone,
     },
     {
       name: "Dell Laptop",
-      newprice: "$1000",
-      oldprice: "$1100",
+      newprice: "1000",
+      oldprice: "1100",
       image: laptop,
     },
     {
       name: "Airpods pro",
-      newprice: "$100",
-      oldprice: "$110",
+      newprice: "100",
+      oldprice: "110",
       image: airpod,
     },
     {
       name: "Samsung s23 ultra",
-      newprice: "$1900",
-      oldprice: "$2100",
+      newprice: "1900",
+      oldprice: "2100",
       image: phone,
     },
     {
       name: "Dell Laptop",
-      newprice: "$1000",
-      oldprice: "$1100",
+      newprice: "1000",
+      oldprice: "1100",
       image: laptop,
     },
     {
       name: "Airpods pro",
-      newprice: "$100",
-      oldprice: "$110",
+      newprice: "100",
+      oldprice: "110",
       image: airpod,
     },
     {
       name: "Samsung s23 ultra",
-      newprice: "$1900",
-      oldprice: "$2100",
+      newprice: "1900",
+      oldprice: "2100",
       image: phone,
     },
     {
       name: "Dell Laptop",
-      newprice: "$1000",
-      oldprice: "$1100",
+      newprice: "1000",
+      oldprice: "1100",
       image: laptop,
     },
   ];
@@ -110,9 +110,9 @@ const BestSellingProduct = () => {
                     <div className="flex flex-col gap-2 ">
                       <div>{val.name}</div>
                       <div className="flex gap-3">
-                        <div className="text-red-600">{val.newprice}</div>
+                        <div className="text-red-600">${val.newprice}</div>
                         <div className="line-through text-thirdColor">
-                          {val.oldprice}
+                          ${val.oldprice}
                         </div>
                       </div>
                       <div className="flex gap-1 items-center">
