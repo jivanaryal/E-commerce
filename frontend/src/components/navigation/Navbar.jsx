@@ -22,7 +22,7 @@ const NavItem = [
 ];
 const Navbar = () => {
   return (
-    <div className="bg-mainColor h-16 text-[#F8F8F9]   fonts ">
+    <div className="bg-mainColor h-16 text-[#F8F8F9] fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
           <div>
@@ -53,7 +53,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center justify-center   gap-10 text-lg">
-          <IoMdCart className="text-2xl" />
+          <Link to={"/cart"}>
+            {" "}
+            <IoMdCart className="text-2xl" />{" "}
+          </Link>
           <div>Signup</div>
           <div>Login</div>
         </div>

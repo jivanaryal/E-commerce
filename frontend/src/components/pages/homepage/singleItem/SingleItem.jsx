@@ -30,9 +30,9 @@ const SingleItem = () => {
   console.log(location.state.image);
   return (
     <div className="bg-gray-300 font-sans">
-      <div className=" py-10">
-        <div className="main px-4 bg-white h-screen w-10/12 mx-auto grid grid-cols-12 justify-between border-2 ">
-          <div className="left col-span-4 pt-5">
+      <div className="">
+        <div className=" px-4 bg-white h-screen w-10/12 mx-auto grid grid-cols-12 justify-between border-2 ">
+          <div className=" col-span-4 pt-5">
             <img
               src={location.state.image}
               alt=""
@@ -111,7 +111,7 @@ const SingleItem = () => {
               </button>
             </div>
           </div>
-          <div className="right flex flex-col  gap-2 pt-8 px-2 col-span-3 bg-[#FAFAFA] shadow-sm text-black">
+          <div className=" flex flex-col  gap-2 pt-8 px-2 col-span-3 bg-[#FAFAFA] shadow-sm text-black">
             <p>Delivery</p>
             <div className="flex gap-4 items-center">
               <div className="logo">

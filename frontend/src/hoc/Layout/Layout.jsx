@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/navigation/Navbar";
 import { useEffect, useState } from "react";
-import Footer from "../../components/footer/Footer";
 
 const Layout = () => {
   const [scroll, setScroll] = useState(false);

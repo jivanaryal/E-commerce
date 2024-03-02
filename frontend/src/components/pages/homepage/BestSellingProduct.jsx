@@ -6,64 +6,65 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
 import { Link, useNavigate } from "react-router-dom";
+export const sellingContent = [
+  {
+    name: "Airpods pro",
+    newprice: "100",
+    oldprice: "110",
+    image: airpod,
+  },
+  {
+    name: "Samsung s23 ultra",
+    newprice: "1900",
+    oldprice: "2100",
+    image: phone,
+  },
+  {
+    name: "Dell Laptop",
+    newprice: "1000",
+    oldprice: "1100",
+    image: laptop,
+  },
+  {
+    name: "Airpods pro",
+    newprice: "100",
+    oldprice: "110",
+    image: airpod,
+  },
+  {
+    name: "Samsung s23 ultra",
+    newprice: "1900",
+    oldprice: "2100",
+    image: phone,
+  },
+  {
+    name: "Dell Laptop",
+    newprice: "1000",
+    oldprice: "1100",
+    image: laptop,
+  },
+  {
+    name: "Airpods pro",
+    newprice: "100",
+    oldprice: "110",
+    image: airpod,
+  },
+  {
+    name: "Samsung s23 ultra",
+    newprice: "1900",
+    oldprice: "2100",
+    image: phone,
+  },
+  {
+    name: "Dell Laptop",
+    newprice: "1000",
+    oldprice: "1100",
+    image: laptop,
+  },
+];
 const BestSellingProduct = () => {
   const navigate = useNavigate();
-  const sellingContent = [
-    {
-      name: "Airpods pro",
-      newprice: "100",
-      oldprice: "110",
-      image: airpod,
-    },
-    {
-      name: "Samsung s23 ultra",
-      newprice: "1900",
-      oldprice: "2100",
-      image: phone,
-    },
-    {
-      name: "Dell Laptop",
-      newprice: "1000",
-      oldprice: "1100",
-      image: laptop,
-    },
-    {
-      name: "Airpods pro",
-      newprice: "100",
-      oldprice: "110",
-      image: airpod,
-    },
-    {
-      name: "Samsung s23 ultra",
-      newprice: "1900",
-      oldprice: "2100",
-      image: phone,
-    },
-    {
-      name: "Dell Laptop",
-      newprice: "1000",
-      oldprice: "1100",
-      image: laptop,
-    },
-    {
-      name: "Airpods pro",
-      newprice: "100",
-      oldprice: "110",
-      image: airpod,
-    },
-    {
-      name: "Samsung s23 ultra",
-      newprice: "1900",
-      oldprice: "2100",
-      image: phone,
-    },
-    {
-      name: "Dell Laptop",
-      newprice: "1000",
-      oldprice: "1100",
-      image: laptop,
-    },
-  ];
+
   return (
     <div className="bg-white pb-10 pt-5 ">
       <div className="flex gap-2 items-center cursor-pointer">

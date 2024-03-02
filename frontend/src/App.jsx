@@ -3,6 +3,7 @@ import Layout from "./hoc/Layout/Layout";
 import Homepage from "./components/pages/homepage";
 import SingleItem from "./components/pages/homepage/singleItem/SingleItem";
 import Contact from "./components/pages/contact";
+import Cart from "./components/pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
             <Route index element={<Homepage />} />
             <Route path="singleItem" element={<SingleItem />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
         </Routes>
       </Router>
