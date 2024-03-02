@@ -30,9 +30,9 @@ const SingleItem = () => {
   console.log(location.state.image);
   return (
     <div className="bg-gray-300 font-sans">
-      <div className="">
-        <div className=" px-4 bg-white h-screen w-10/12 mx-auto grid grid-cols-12 justify-between border-2 ">
-          <div className=" col-span-4 pt-5">
+      <div className=" py-10">
+        <div className=" px-4 bg-white  w-10/12 mx-auto grid grid-cols-12  border-2">
+          <div className="left col-span-4 pt-5">
             <img
               src={location.state.image}
               alt=""

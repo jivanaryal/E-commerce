@@ -1,6 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import { IoMdCart } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
 const NavItem = [
   {
@@ -21,6 +21,7 @@ const NavItem = [
   },
 ];
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-mainColor h-16 text-[#F8F8F9] fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
@@ -59,6 +60,23 @@ const Navbar = () => {
           </Link>
           <div>Signup</div>
           <div>Login</div>
+          <IoMdCart className="text-2xl" />
+          <div
+            onClick={() => {
+              navigate("/signup");
+            }}
+            className="cursor-pointer"
+          >
+            Signup
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            Login
+          </div>
         </div>
       </div>
     </div>
