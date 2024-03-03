@@ -49,3 +49,9 @@ body::-webkit-scrollbar {
 }
 
 
+option{
+  height: 20px;
+  padding: 6px;
+}
+
+

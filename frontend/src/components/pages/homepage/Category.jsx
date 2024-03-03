@@ -1,5 +1,6 @@
 // This is category section
 import { IoIosPhonePortrait } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const CatContent = [
   {
@@ -34,15 +35,19 @@ const Category = () => {
             View all
           </button>
         </div>
-        <div className="content flex justify-around items-center   pt-10 ">
+        <div className="content flex gap-20  items-center   pt-10 ">
           {CatContent.map((val, i) => {
             return (
-              <div
-                key={i}
-                className="border-[1px] rounded-md border-gray-800 w-40 py-10 flex items-center justify-center flex-col"
-              >
-                <div className="text-3xl">{val.logos}</div>
-                <div className="text-lg">{val.name}</div>
+              <div key={i}>
+                <Link to={"/category"}>
+                  <div
+                    key={i}
+                    className="border-[1px]  rounded-md border-gray-800 w-40 py-10 flex items-center justify-center flex-col"
+                  >
+                    <div className="text-3xl">{val.logos}</div>
+                    <div className="text-lg">{val.name}</div>
+                  </div>
+                </Link>
               </div>
             );
           })}
