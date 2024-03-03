@@ -1,4 +1,3 @@
-import React from "react";
 import aboutus from "../../../assets/images/aboutus.jpg";
 const OurStory = () => {
   return (

@@ -8,11 +8,13 @@ import Signup from "./components/pages/signup/Signup";
 import Login from "./components/pages/login/Login";
 import About from "./components/pages/about";
 import Products from "./components/pages/product/Products";
+import ScrollToTop from "./hoc/Layout/ScrollToTop";
 
 const App = () => {
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
