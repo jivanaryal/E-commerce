@@ -72,9 +72,9 @@ const BestSellingProduct = () => {
         <div className="text-mainColor text-xs">This month</div>
       </div>
       <div className="flex justify-between items-center mx-4 ">
-        <div className="text-2xl">Best Selling Products</div>
+        <div className="text-2xl text-mainColor">Best Selling Products</div>
         <div
-          className="bg-mainColor px-3 py-1 rounded-xl cursor-pointer"
+          className="bg-mainColor px-3 py-1 rounded-md text-white cursor-pointer"
           onClick={() => {
             navigate("/products");
           }}

@@ -79,7 +79,7 @@ const ExploreProducts = () => {
         <div className="text-mainColor text-sm">Our products</div>
       </div>
       <div className="flex justify-between items-center mx-4 ">
-        <div className="text-2xl">Explore Our Products</div>
+        <div className="text-2xl text-mainColor">Explore Our Products</div>
 
         <div className=" px-3 py-1 rounded-md flex gap-3 text-xl">
           <div

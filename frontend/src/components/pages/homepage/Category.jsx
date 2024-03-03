@@ -30,8 +30,8 @@ const Category = () => {
     <div className="pb-10 bg-white pt-10 fonts border-2">
       <div className="main   mx-4">
         <div className="header flex justify-between items-center ">
-          <h1 className="text-2xl text-black">Categories</h1>
-          <button className="bg-[#00ABE4] py-1 px-3 rounded-md">
+          <h1 className="text-2xl text-mainColor">Categories</h1>
+          <button className="bg-[#00ABE4] py-1 px-3 rounded-md text-white">
             View all
           </button>
         </div>

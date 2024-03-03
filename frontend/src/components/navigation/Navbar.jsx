@@ -23,14 +23,17 @@ const NavItem = [
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-mainColor h-16 text-[#fff] fonts ">
+    <div className="bg-secondColor h-16 text-[#fff] fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
           <div>
             <img
               src={logo}
               alt="logo"
-              className="w-12 rounded-full h-12 animate-pulse"
+              className="w-12 rounded-full h-12  animate-bounce hover:animate ease-in-out cursor-pointer"
+              onClick={() => {
+                navigate("/");
+              }}
             />
           </div>
         </div>
@@ -59,10 +62,13 @@ const Navbar = () => {
             <CiSearch className="absolute top-2  text-xl text-black right-2" />
           </div>
         </div>
-        <div className="flex items-center justify-center    gap-10 text-lg">
+        <div className="flex items-center justify-center relative   gap-10 text-lg">
           <Link to={"/cart"}>
             {" "}
-            <IoMdCart className="text-2xl  hover:text-[#f5e2e2]" />{" "}
+            <IoMdCart className="text-2xl  hover:text-[#f5e2e2] " />{" "}
+            <div className=" absolute bottom-5 left-4 h-4 w-4 rounded-full bg-red-500 text-xs text-center">
+              3
+            </div>
           </Link>
           <div
             className="cursor-pointer  hover:text-[#f5e2e2]"
