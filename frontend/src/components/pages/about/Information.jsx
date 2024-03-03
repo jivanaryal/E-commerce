@@ -33,17 +33,17 @@ const Information = () => {
         {info.map((val, i) => {
           return (
             <div
-              className="w-56 h-48 border-2 rounded-sm hover:bg-mainColor hover:text-white scale-105 delay-200 duration-200 group cursor-pointer"
+              className="w-56 h-48 border-2 rounded-sm hover:bg-mainColor scale-105 transition-all  delay-75 duration-200 group cursor-pointer"
               key={i}
             >
               <div className="flex flex-col gap-4 justify-evenly items-center h-full text-center  mx-auto">
                 <div className="bg-thirdColor w-fit rounded-full p-2 group-hover:bg-[#61bddc]">
-                  <div className="bg-black group-hover:bg-white group-hover:text-black w-fit rounded-full text-white p-1 text-4xl">
+                  <div className="bg-black group-hover:bg-white transition-all  delay-75 duration-200 group-hover:text-black w-fit rounded-full text-white p-1 text-4xl">
                     {val.icon}
                   </div>
                 </div>
                 <div className="text-xl font-bold">{val.activenumbers}</div>
-                <div className="text-sm text-gray-600 group-hover:text-white">
+                <div className="text-sm text-gray-600 transition-all  delay-75 duration-200 group-hover:text-white">
                   {val.remarks}
                 </div>
               </div>

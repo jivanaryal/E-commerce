@@ -130,11 +130,11 @@ const Products = () => {
                   <MdOutlineStarPurple500 className="text-orange-500" />
                   <div>4.6/5</div>
                 </div>
-                <div className="flex gap-1 py-1">
-                  <button className="text-xs text-mainColor py-1 border-[1px] w-fit px-2 border-mainColor">
+                <div className="flex gap-2 py-1">
+                  <button className="text-[12px] text-mainColor py-1 border-[1px] w-fit px-1 border-mainColor">
                     free delivery
                   </button>
-                  <button className="text-xs text-orange-500 py-1 border-[1px] w-fit px-2 border-orange-500">
+                  <button className="text-[12px] text-orange-500 py-1 border-[1px] w-fit px-1 border-orange-500">
                     Two Voucher
                   </button>
                 </div>
