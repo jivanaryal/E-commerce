@@ -1,4 +1,5 @@
 import phone from "../../../assets/images/samsung.jpg";
+import phone1 from "../../../assets/images/phone.png";
 import laptop from "../../../assets/images/laptop-png-6778.png";
 import airpod from "../../../assets/images/airpod.png";
 import { MdDelete } from "react-icons/md";
@@ -6,6 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { FiMinus } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const ItemsData = [
   {
     storeName: "Glam and Glitter",
@@ -23,7 +25,7 @@ const ItemsData = [
     offer: "Buy 4 item(s) more enjoy free shopping for Express Delivery option",
     delivery: "Earliest Delivery",
     time: "4 Mar",
-    image: laptop,
+    image: phone1,
     name: "M10 Wireless Earbuds Version 5.1 | Digital Display",
     about: "No Brand, Size:free size, Color Family:Maroon",
     newPrice: "Rs. 749",
@@ -35,6 +37,17 @@ const ItemsData = [
     delivery: "Earliest Delivery",
     time: "4 Mar",
     image: phone,
+    name: "M10 Wireless Earbuds Version 5.1 | Digital Display",
+    about: "No Brand, Size:free size, Color Family:Maroon",
+    newPrice: "Rs. 749",
+    oldPrice: "Rs. 2000",
+  },
+  {
+    storeName: "Glam and Glitter",
+    offer: "Buy 4 item(s) more enjoy free shopping for Express Delivery option",
+    delivery: "Earliest Delivery",
+    time: "4 Mar",
+    image: laptop,
     name: "M10 Wireless Earbuds Version 5.1 | Digital Display",
     about: "No Brand, Size:free size, Color Family:Maroon",
     newPrice: "Rs. 749",
@@ -103,16 +116,18 @@ const Cart = () => {
                     </div>
                     <hr />
                     <div className="down py-6 flex items-center justify-between px-2">
-                      <div className="left flex items-center gap-2">
-                        <input type="checkbox" name="" id="" />
-                        <img src={val.image} alt="" className="w-12 " />
-                        <div>
-                          <div className="text-sm">{val.name}</div>
-                          <div className="text-[12px] text-gray-400">
-                            {val.about}
+                      <Link to={`/singleItem`} state={val}>
+                        <div className="left flex items-center gap-2">
+                          <input type="checkbox" name="" id="" />
+                          <img src={val.image} alt="" className="w-12 " />
+                          <div>
+                            <div className="text-sm">{val.name}</div>
+                            <div className="text-[12px] text-gray-400">
+                              {val.about}
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      </Link>
                       <div className="middle">
                         <div>{val.newPrice}</div>
                         <strike>{val.oldPrice}</strike>

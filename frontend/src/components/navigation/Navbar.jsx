@@ -9,7 +9,7 @@ const NavItem = [
   },
   {
     name: "products",
-    path: "/products",
+    path: "/category",
   },
   {
     name: "contact",
@@ -23,17 +23,14 @@ const NavItem = [
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-mainColor h-16 text-[#F8F8F9] fonts ">
+    <div className="bg-mainColor h-16 text-[#fff] fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
           <div>
             <img
               src={logo}
               alt="logo"
-              className="w-12 rounded-full h-12 cursor-pointer"
-              onClick={() => {
-                navigate("/");
-              }}
+              className="w-12 rounded-full h-12 animate-pulse"
             />
           </div>
         </div>
@@ -44,7 +41,9 @@ const Navbar = () => {
                 <div key={i}>
                   <Link to={val.path}>
                     {" "}
-                    <div>{val.name}</div>
+                    <div className="capitalize  hover:text-[#f5e2e2]">
+                      {val.name}
+                    </div>
                   </Link>
                 </div>
               );
@@ -60,13 +59,13 @@ const Navbar = () => {
             <CiSearch className="absolute top-2  text-xl text-black right-2" />
           </div>
         </div>
-        <div className="flex items-center justify-center   gap-10 text-lg">
+        <div className="flex items-center justify-center    gap-10 text-lg">
           <Link to={"/cart"}>
             {" "}
-            <IoMdCart className="text-2xl" />{" "}
+            <IoMdCart className="text-2xl  hover:text-[#f5e2e2]" />{" "}
           </Link>
           <div
-            className="cursor-pointer"
+            className="cursor-pointer  hover:text-[#f5e2e2]"
             onClick={() => {
               navigate("/signup");
             }}
@@ -74,7 +73,7 @@ const Navbar = () => {
             Signup
           </div>
           <div
-            className="cursor-pointer"
+            className="cursor-pointer  hover:text-[#f5e2e2]"
             onClick={() => {
               navigate("/login");
             }}
