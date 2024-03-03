@@ -5,6 +5,7 @@ import Services from "./Services";
 import Slider from "./Slider";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
+import Footer from "../../footer/Footer";
 
 const index = () => {
   return (
@@ -17,6 +18,7 @@ const index = () => {
       <Testimonials />
       <Services />
       <Team />
+      <Footer />
     </div>
   );
 };

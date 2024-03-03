@@ -1,4 +1,3 @@
-import React from "react";
 import Calltous from "./Calltous";
 import Writetous from "./Writetous";
 import Contactform from "./Contactform";
