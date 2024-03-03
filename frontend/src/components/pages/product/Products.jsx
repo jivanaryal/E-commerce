@@ -1,5 +1,6 @@
 import laptop from "../../../assets/images/laptop-png-6778.png";
 import airpod from "../../../assets/images/airpod.png";
+import phone from "../../../assets/images/phone.png";
 import { MdDashboard, MdOutlineStarPurple500 } from "react-icons/md";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { useState } from "react";
@@ -15,11 +16,65 @@ export const sellingContent = [
     name: "Samsung s23 ultra",
     newprice: 200,
 
-    image: airpod,
+    image: phone,
   },
   {
     name: "Dell Laptop",
     newprice: 300,
+
+    image: phone,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: phone,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: laptop,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: laptop,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: phone,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
 
     image: laptop,
   },
@@ -39,79 +94,25 @@ export const sellingContent = [
     name: "Airpods pro",
     newprice: 400,
 
-    image: airpod,
+    image: phone,
   },
   {
     name: "Airpods pro",
     newprice: 400,
 
-    image: airpod,
+    image: laptop,
   },
   {
     name: "Airpods pro",
     newprice: 400,
 
-    image: airpod,
+    image: phone,
   },
   {
     name: "Airpods pro",
     newprice: 400,
 
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
-  },
-  {
-    name: "Airpods pro",
-    newprice: 400,
-
-    image: airpod,
+    image: phone,
   },
   {
     name: "Airpods pro",
@@ -161,6 +162,24 @@ export const sellingContent = [
 
     image: laptop,
   },
+  {
+    name: "Dell Laptop",
+    newprice: 50,
+
+    image: laptop,
+  },
+  {
+    name: "Dell Laptop",
+    newprice: 50,
+
+    image: laptop,
+  },
+  {
+    name: "Dell Laptop",
+    newprice: 50,
+
+    image: laptop,
+  },
 ];
 
 console.log(sellingContent.length);
@@ -170,7 +189,7 @@ const Products = () => {
   const [filtering, setFiltering] = useState(sellingContent);
   const [half, setHalf] = useState("half");
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [postsPerPage, usePostPerPage] = useState(12);
+  const [postsPerPage, setpostPerPage] = useState(12);
 
   const pageNumbers = [];
 

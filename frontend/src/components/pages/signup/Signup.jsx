@@ -1,5 +1,4 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 import logo from "../../../assets/images/logo.jpg";
 import { useNavigate } from "react-router-dom";
@@ -60,14 +59,19 @@ const Signup = () => {
             confirmpassword: "",
           }}
           validationSchema={schema}
-          onSubmit={(val) => {}}
+          onSubmit={(val) => {
+            console.log(val);
+          }}
         >
           {({ handleSubmit }) => {
             return (
               <Form onSubmit={handleSubmit}>
                 {formItems.map((val, i) => {
                   return (
-                    <div className="grid grid-cols-1 place-content-center p-2">
+                    <div
+                      className="grid grid-cols-1 place-content-center p-2"
+                      key={i}
+                    >
                       <label
                         htmlFor={val.name}
                         className="grid grid-rows-1 text-xs"
