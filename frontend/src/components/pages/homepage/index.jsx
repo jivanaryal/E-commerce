@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 
 const index = () => {
   return (
-    <div className="bg-white w-[97%] mx-auto">
+    <div className=" w-[97%] mx-auto">
       {/* This is the index page where we call all the homepage component */}
       <Slider />
       <Category />

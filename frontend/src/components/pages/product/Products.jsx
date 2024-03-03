@@ -30,6 +30,108 @@ export const sellingContent = [
     image: airpod,
   },
   {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
+    name: "Airpods pro",
+    newprice: 400,
+
+    image: airpod,
+  },
+  {
     name: "Samsung s23 ultra",
     newprice: 500,
 
@@ -61,9 +163,25 @@ export const sellingContent = [
   },
 ];
 
+console.log(sellingContent.length);
+26 / 12;
+
 const Products = () => {
   const [filtering, setFiltering] = useState(sellingContent);
   const [half, setHalf] = useState("half");
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [postsPerPage, usePostPerPage] = useState(12);
+
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(filtering.length / postsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  //For Getting currentPage
+  const indexOfLastPost = currentIndex * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = filtering.slice(indexOfFirstPost, indexOfLastPost);
 
   const handleChange = (event) => {
     let newItem;
@@ -114,7 +232,7 @@ const Products = () => {
       {/* Products Items  */}
       {half === "half" && (
         <div className="grid grid-cols-4 gap-10 pt-10 items-center">
-          {filtering.map((val, i) => (
+          {currentPosts.map((val, i) => (
             <div
               key={i}
               className="w-60 h-[340px]  gap-2 flex flex-col items-start boxess "
@@ -146,7 +264,7 @@ const Products = () => {
       )}
       {half === "full" && (
         <div className="flex flex-col gap-6 w-11/12">
-          {filtering.map((val, i) => (
+          {currentPosts.map((val, i) => (
             <div key={i} className="flex justify-between boxess py-4 ">
               <div className="left flex">
                 <img src={val.image} alt="" className="h-52 w-60" />
@@ -182,6 +300,21 @@ const Products = () => {
           ))}
         </div>
       )}
+
+      <div className="button flex gap-4 justify-center pt-10">
+        {pageNumbers.map((numbers, i) => (
+          <div key={i}>
+            <button
+              className="py-1 px-4 border-mainColor bg-mainColor text-white"
+              onClick={() => {
+                setCurrentIndex(numbers);
+              }}
+            >
+              {numbers}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

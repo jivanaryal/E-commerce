@@ -15,13 +15,6 @@ const Slider = () => {
     });
   };
 
-  // const PreviousItem = () => {
-  //   setIndex((index) => {
-  //     if (index === 0) return slideItem.length - 1;
-  //     return index - 1;
-  //   });
-  // };
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       showNextImage();
