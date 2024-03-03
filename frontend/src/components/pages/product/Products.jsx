@@ -324,7 +324,7 @@ const Products = () => {
         {pageNumbers.map((numbers, i) => (
           <div key={i}>
             <button
-              className="py-1 px-4 border-mainColor bg-mainColor text-white"
+              className="py-1 px-4 border-mainColor bg-mainColor hover:bg-secondColor text-white"
               onClick={() => {
                 setCurrentIndex(numbers);
               }}

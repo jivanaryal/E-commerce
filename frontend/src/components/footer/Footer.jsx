@@ -1,5 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
 import logo from "../../assets/images/logo.jpg";
+import { useNavigate } from "react-router-dom";
 const Column1 = [
   {
     linkname: "Link One",
@@ -49,12 +50,25 @@ const FollowUs = [
 ];
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <div className=" w-full px-10 bg-secondColor mt-20 text-white font-medium py-7">
       <div className="grid grid-cols-2">
         <div className="left">
           <div className="rounded-full bg-thirdColor  h-24 w-24">
-            <img src={logo} className="w-24 h-24 rounded-full" />
+            <img
+              src={logo}
+              className="w-24 h-24 rounded-full"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+                navigate("/");
+              }}
+            />
           </div>
           <p className="text-lg py-3">
             Stay up to date on the latest features and releases by joining our
