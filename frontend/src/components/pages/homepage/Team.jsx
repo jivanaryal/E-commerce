@@ -53,19 +53,19 @@ const Team = () => {
       <p className="text-white text-lg pb-10 pt-4">
         Get to know the talented individuals behind our compnay
       </p>
-      <div className="grid grid-cols-4  gap-y-10">
+      <div className="flex flex-wrap   gap-20">
         {TeamDetails.map((val, i) => {
           return (
             <div
               key={i}
-              className="w-64 rounded-b-xl  bg-white shadow-mainColor border-[1px] shadow-md flex flex-col items-center rounded-t-xl    outline-none hover:scale-105 transition-all duration-700 delay-100"
+              className="w-60  rounded-b-xl  bg-white shadow-thirdColor   border-[1px] shadow-sm flex flex-col items-center rounded-t-xl    outline-none hover:scale-105 transition-all duration-700 delay-100"
             >
               <img
                 src={val.photo}
                 alt="photo"
-                className=" w-full h-48 rounded-t-xl bg-red-500"
+                className=" w-full h-56 rounded-t-xl bg-red-500"
               />
-              <div className="flex flex-col items-center gap-2  pb-8">
+              <div className="flex flex-col items-center gap-2  pb-2">
                 <div className="position text-gray-600 pt-3">
                   {val.position}
                 </div>
