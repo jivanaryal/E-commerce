@@ -3,20 +3,17 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import logo from "../../../assets/images/logo.jpg";
 import { useNavigate } from "react-router-dom";
+import signupImage from "../../../assets/images/signupimage.jpg";
+import google from "../../../assets/images/google.png";
+// import Signup from "../signup/Signup";
 const Signup = () => {
   const navigate = useNavigate();
   const formItems = [
     {
-      name: "firstname",
+      name: "name",
       type: "text",
-      label: "First Name",
-      placeholder: "Enter your First Name",
-    },
-    {
-      name: "lastname",
-      type: "text",
-      label: "Last Name",
-      placeholder: "Enter your Last Name",
+      label: "Name",
+      placeholder: "Enter your Email Address",
     },
     {
       name: "email",
@@ -38,22 +35,22 @@ const Signup = () => {
     },
   ];
   const schema = yup.object().shape({
-    firstname: yup.string().required("First Name is required"),
-    lastname: yup.string().required("Last Name is required"),
     email: yup.string().required("Email is required"),
     password: yup.string().required("Password is required"),
-    confirmpassword: yup.string().required("Confirm Password is required"),
   });
   return (
-    <div className="flex justify-center items-center h-screen bg-thirdColor ">
-      <div className="bg-white p-6 px-12 h-fit w-fit rounded-md shadow-lg shadow-secondColor">
-        <div className="flex justify-center mr-[5%]  gap-5 items-center ">
-          <div className=" h-32 w-32 ">
+    <div className="flex justify-center items-center h-screen ">
+      <div className="h-fit ">
+        <img src={signupImage} />
+      </div>
+      <div className="bg-white p-6 px-20 h-fit w-fit ">
+        <div className="flex justify-center  items-center ">
+          <div className=" h-28 w-28 ">
             <img src={logo} className="h-fit w-fit" />
           </div>
-          <div className="text-2xl text-mainColor font-bold">Sign up</div>
+          <div className="text-2xl text-mainColor font-bold">Signup</div>
         </div>
-        <hr className="mb-5 mt-0" />
+        <hr className="mb-5 mt-2" />
         <Formik
           initialValues={{
             firstname: "",
@@ -70,52 +67,59 @@ const Signup = () => {
               <Form onSubmit={handleSubmit}>
                 {formItems.map((val, i) => {
                   return (
-                    <div key={i} className="">
-                      <div className="grid grid-cols-2 place-content-center">
-                        <label
-                          htmlFor={val.name}
-                          className="grid grid-rows-2 pt-1"
-                        >
-                          {val.label} :
-                        </label>
-                        <div className="flex flex-col">
-                          <div>
-                            {" "}
-                            <Field
-                              type={val.type}
-                              name={val.name}
-                              placeholder={val.placeholder}
-                              className="border-2  rounded-sm outline-none p-2  px-5 text-xs"
-                            />
-                          </div>
-                          <ErrorMessage
+                    <div className="grid grid-cols-1 place-content-center p-2">
+                      <label
+                        htmlFor={val.name}
+                        className="grid grid-rows-1 text-xs"
+                      ></label>
+                      <div className="flex flex-col">
+                        <div>
+                          {" "}
+                          <Field
+                            type={val.type}
                             name={val.name}
-                            component="div"
-                            className="text-red-600 text-xs"
+                            placeholder={val.placeholder}
+                            className="border-b-[1px] border-gray-400  rounded-sm outline-none p-2  pr-24 text-xs"
                           />
                         </div>
+                        {/* <ErrorMessage
+                            name={val.name}
+                            component="div"
+                            className="text-red-600 text-sm"
+                          /> */}
                       </div>
                     </div>
                   );
                 })}
 
-                <div className="flex justify-center items-center text-xs gap-2">
-                  <div>
-                    <input type="checkbox" name="checkbox" id="" />
-                  </div>
-                  <div className="my-2">I agree to terms and conditions</div>
-                </div>
-                <div
-                  className="text-mainColor text-xs text-center my-4 cursor-pointer"
-                  onClick={() => {
-                    navigate("/login");
-                  }}
-                >
-                  Aready have logged in?
-                </div>
+                <div className="flex flex-col gap-3 mt-5">
+                  <div className="text-xs  text-mainColor text-center cursor-pointer"></div>
 
-                <div className="bg-mainColor text-white p-2  rounded-md w-40 mx-auto text-center cursor-pointer hover:bg-white hover:text-mainColor hover:border-2 hover:scale-110 ease-in-out delay-100 duration-100">
-                  <button type="submit">Submit</button>
+                  <div className="bg-mainColor text-white p-2  text-sm rounded-md w-full mx-auto text-center cursor-pointer hover:bg-white hover:text-mainColor hover:border-2 hover:scale-110 ease-in-out delay-100 duration-100">
+                    <button type="submit">Create Account</button>
+                  </div>
+                  <div className="flex items-center justify-center border-2 border-gray-400 rounded-sm cursor-pointer hover:border-black delay-200 duration-300">
+                    <div className="w-10 h-10">
+                      <img src={google} />
+                    </div>
+                    <div className="capitalize text-xs text-thirdColor ">
+                      sign up with google
+                    </div>
+                  </div>
+                  <div
+                    className="text-xs text-thirdColor cursor-pointer text-center"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Already have account? login
+                  </div>
+                  <div
+                    className="text-mainColor text-xs text-center cursor-pointer"
+                    onClick={() => {
+                      navigate("/signup");
+                    }}
+                  ></div>
                 </div>
               </Form>
             );

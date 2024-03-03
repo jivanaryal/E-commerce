@@ -76,7 +76,7 @@ const BestSellingProduct = () => {
         <div
           className="bg-mainColor px-3 py-1 rounded-xl cursor-pointer"
           onClick={() => {
-            navigate("/singleItem");
+            navigate("/products");
           }}
         >
           View All
