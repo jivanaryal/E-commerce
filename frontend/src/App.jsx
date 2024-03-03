@@ -6,19 +6,20 @@ import Contact from "./components/pages/contact";
 import Cart from "./components/pages/Cart/Cart";
 import Signup from "./components/pages/signup/Signup";
 import Login from "./components/pages/login/Login";
-
+import About from "./components/pages/about";
 const App = () => {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
             <Route path="singleItem" element={<SingleItem />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </Router>

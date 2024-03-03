@@ -21,6 +21,7 @@ const NavItem = [
   },
 ];
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-mainColor h-16 text-[#F8F8F9] fonts ">
       <div className="flex justify-between mx-6  items-center text-lg h-full">
@@ -44,12 +45,12 @@ const Navbar = () => {
           </div>
           <div className="flex gap-4 mr-4 relative ">
             <input
-              type="search"
+              type="text"
               name="search"
               id="search"
-              className="h-8 w-96 rounded-md"
+              className="h-8 w-96 rounded-md outline-none text-black px-3 text-xs"
             />
-            <CiSearch className="absolute top-2 text-xl text-black right-2" />
+            <CiSearch className="absolute top-2  text-xl text-black right-2" />
           </div>
         </div>
         <div className="flex items-center justify-center   gap-10 text-lg">
@@ -57,8 +58,22 @@ const Navbar = () => {
             {" "}
             <IoMdCart className="text-2xl" />{" "}
           </Link>
-          <div>Signup</div>
-          <div>Login</div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              navigate("/signup");
+            }}
+          >
+            Signup
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            Login
+          </div>
         </div>
       </div>
     </div>
