@@ -27,7 +27,14 @@ const Navbar = () => {
       <div className="flex justify-between mx-6  items-center text-lg h-full">
         <div className="left">
           <div>
-            <img src={logo} alt="logo" className="w-12 rounded-full h-12" />
+            <img
+              src={logo}
+              alt="logo"
+              className="w-12 rounded-full h-12 cursor-pointer"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </div>
         </div>
         <div className="flex">

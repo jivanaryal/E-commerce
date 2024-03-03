@@ -1,5 +1,5 @@
 import { FaFacebook } from "react-icons/fa";
-
+import logo from "../../assets/images/logo.jpg";
 const Column1 = [
   {
     linkname: "Link One",
@@ -50,10 +50,12 @@ const FollowUs = [
 
 const Footer = () => {
   return (
-    <div className=" w-full px-10 bg-mainColor mt-20 text-black py-7">
+    <div className=" w-full px-10 bg-secondColor mt-20 text-white font-medium py-7">
       <div className="grid grid-cols-2">
         <div className="left">
-          <div className="logo py-2 px-3 bg-thirdColor w-fit pb-2">Logo</div>
+          <div className="rounded-full bg-thirdColor  h-24 w-24">
+            <img src={logo} className="w-24 h-24 rounded-full" />
+          </div>
           <p className="text-lg py-3">
             Stay up to date on the latest features and releases by joining our
             newsletter.
