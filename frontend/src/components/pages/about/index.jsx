@@ -1,4 +1,3 @@
-import React from "react";
 import OurStory from "./OurStory";
 import Information from "./Information";
 import OurTeams from "./OurTeams";

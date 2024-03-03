@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineShop } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
@@ -30,7 +29,7 @@ const Information = () => {
   ];
   return (
     <div className="w-[80%] mx-auto">
-      <div className="flex pb-10 gap-10">
+      <div className="flex  gap-20 mt-20 my-10 ">
         {info.map((val, i) => {
           return (
             <div

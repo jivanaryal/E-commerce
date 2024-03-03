@@ -1,4 +1,3 @@
-import React from "react";
 import profile from "../../../assets/images/profile.jpeg";
 import { CiTwitter } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
