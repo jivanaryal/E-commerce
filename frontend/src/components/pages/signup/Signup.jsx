@@ -6,6 +6,8 @@ import signupImage from "../../../assets/images/signupimage.jpg";
 import google from "../../../assets/images/google.png";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+
 // import Signup from "../signup/Signup";
 const Signup = () => {
   const navigate = useNavigate();
@@ -114,7 +116,11 @@ const Signup = () => {
                         {/* sign up with google */}
                         <GoogleLogin
                           onSuccess={(credentialResponse) => {
-                            console.log(credentialResponse, "dbfkjscb");
+                            const decoded = jwtDecode(
+                              credentialResponse?.credential
+                            );
+
+                            console.log(decoded, "dbfkjscb");
                           }}
                           onError={() => {
                             console.log("Login Failed");
