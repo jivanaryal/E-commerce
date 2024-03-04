@@ -4,6 +4,8 @@ import logo from "../../../assets/images/logo.jpg";
 import { useNavigate } from "react-router-dom";
 import signupImage from "../../../assets/images/signupimage.jpg";
 import google from "../../../assets/images/google.png";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 // import Signup from "../signup/Signup";
 const Signup = () => {
   const navigate = useNavigate();
@@ -103,11 +105,22 @@ const Signup = () => {
                     <button type="submit">Create Account</button>
                   </div>
                   <div className="flex items-center justify-center border-2 border-gray-400 rounded-sm cursor-pointer hover:border-black delay-200 duration-300">
-                    <div className="w-10 h-10">
+                    {/* <div className="w-10 h-10">
                       <img src={google} />
-                    </div>
+                    </div> */}
                     <div className="capitalize text-xs text-thirdColor ">
-                      sign up with google
+                      <GoogleOAuthProvider clientId="707925617788-9b8c4r32ofbfn8t8d90in35fdepqd4ao.apps.googleusercontent.com">
+                        {" "}
+                        {/* sign up with google */}
+                        <GoogleLogin
+                          onSuccess={(credentialResponse) => {
+                            console.log(credentialResponse, "dbfkjscb");
+                          }}
+                          onError={() => {
+                            console.log("Login Failed");
+                          }}
+                        />
+                      </GoogleOAuthProvider>
                     </div>
                   </div>
                   <div

@@ -80,7 +80,7 @@ const Footer = () => {
               name="search"
               id="search"
               placeholder="your email"
-              className="py-3 w-9/12"
+              className="py-3 w-9/12 outline-none"
             />
             <button className="bg-black text-white py-3 px-6">Subscribe</button>
           </div>
